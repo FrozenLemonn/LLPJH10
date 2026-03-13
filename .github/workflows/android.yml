@@ -32,6 +32,9 @@ jobs:
     - name: Make gradlew executable
       run: chmod +x LauncherApp/gradlew
 
+    - name: Clean Gradle cache
+      run: cd LauncherApp && ./gradlew clean
+
     - name: Build with Gradle
       run: cd LauncherApp && ./gradlew assembleDebug
 
