@@ -38,6 +38,9 @@ jobs:
     - name: Build with Gradle
       run: cd LauncherApp && ./gradlew assembleDebug
 
+    - name: Build APK
+      run: cd LauncherApp && ./gradlew assembleRelease --stacktrace
+
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
